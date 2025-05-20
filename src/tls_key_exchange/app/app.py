@@ -30,7 +30,8 @@ key = Fernet.generate_key()
 print(key)
 
 alphabet = string.digits
-password = ''.join(secrets.choice(alphabet) for i in range(8))
+nr_of_digits = 10
+password = ''.join(secrets.choice(alphabet) for i in range(nr_of_digits))
 salt = os.urandom(16)
 
 def generate_key(password: str, salt: bytes) -> bytes:
