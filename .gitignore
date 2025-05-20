@@ -1,0 +1,7 @@
+__pycache__
+.swp
+*.crt
+*.csr
+*.key
+*.enc
+src/tls_key_exchange/download/

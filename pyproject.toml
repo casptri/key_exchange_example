@@ -1,0 +1,29 @@
+[project]
+name = "tls_key_exchange"
+version = "0.1.0"
+description = "PoC for a tls key exchange for mTLS without a registered domain"
+readme = "README.md"
+authors = [
+    { name = "Caspar Trittibach", email = "" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.18",
+    "click>=8.1.7",
+    "cryptography>=44.0.3",
+    "flask>=3.1.1",
+    "requests>=2.32.3",
+    "zeroconf>=0.147.0",
+]
+
+
+[project.scripts]
+tke = "tls_key_exchange:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = "src/"
+
